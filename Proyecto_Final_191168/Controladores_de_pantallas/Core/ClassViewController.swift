@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Controlador para mostrar y buscar clases
 final class ClassViewController: UIViewController {
 
     override func viewDidLoad() {

@@ -13,14 +13,18 @@
 		FB6F81142CDBD2100065FAA5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FB6F81132CDBD2100065FAA5 /* Base */; };
 		FB6F81162CDBD2110065FAA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6F81152CDBD2110065FAA5 /* Assets.xcassets */; };
 		FB6F81192CDBD2110065FAA5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FB6F81182CDBD2110065FAA5 /* Base */; };
-		FBA1BCAF2CDE72AF00906477 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCAE2CDE72AF00906477 /* Classes.swift */; };
-		FBA1BCB12CDE72C800906477 /* Monsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCB02CDE72C800906477 /* Monsters.swift */; };
+		FBA1BCAF2CDE72AF00906477 /* DNDClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCAE2CDE72AF00906477 /* DNDClasses.swift */; };
+		FBA1BCB12CDE72C800906477 /* DNDMonsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCB02CDE72C800906477 /* DNDMonsters.swift */; };
 		FBA1BCB32CDE735D00906477 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCB22CDE735D00906477 /* TabViewController.swift */; };
-		FBA1BCB82CDE773B00906477 /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCB72CDE773B00906477 /* Races.swift */; };
+		FBA1BCB82CDE773B00906477 /* DNDRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCB72CDE773B00906477 /* DNDRaces.swift */; };
 		FBA1BCBA2CDE7C4000906477 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCB92CDE7C4000906477 /* ClassViewController.swift */; };
 		FBA1BCBC2CDE7C7400906477 /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCBB2CDE7C7400906477 /* MonsterViewController.swift */; };
 		FBA1BCBE2CDE7C8C00906477 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCBD2CDE7C8C00906477 /* RaceViewController.swift */; };
 		FBA1BCC02CDE7C9900906477 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCBF2CDE7C9900906477 /* SettingsViewController.swift */; };
+		FBE22F402CE50FC200C75C8E /* DNDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE22F3F2CE50FC200C75C8E /* DNDService.swift */; };
+		FBE22F422CE50FD200C75C8E /* DNDRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE22F412CE50FD200C75C8E /* DNDRequest.swift */; };
+		FBE22F442CE510D200C75C8E /* DNDEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE22F432CE510D200C75C8E /* DNDEndpoint.swift */; };
+		FBE22F462CE519CF00C75C8E /* DNDArchetype.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE22F452CE519CF00C75C8E /* DNDArchetype.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +36,18 @@
 		FB6F81152CDBD2110065FAA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB6F81182CDBD2110065FAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB6F811A2CDBD2110065FAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBA1BCAE2CDE72AF00906477 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
-		FBA1BCB02CDE72C800906477 /* Monsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monsters.swift; sourceTree = "<group>"; };
+		FBA1BCAE2CDE72AF00906477 /* DNDClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDClasses.swift; sourceTree = "<group>"; };
+		FBA1BCB02CDE72C800906477 /* DNDMonsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDMonsters.swift; sourceTree = "<group>"; };
 		FBA1BCB22CDE735D00906477 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		FBA1BCB72CDE773B00906477 /* Races.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
+		FBA1BCB72CDE773B00906477 /* DNDRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDRaces.swift; sourceTree = "<group>"; };
 		FBA1BCB92CDE7C4000906477 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
 		FBA1BCBB2CDE7C7400906477 /* MonsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterViewController.swift; sourceTree = "<group>"; };
 		FBA1BCBD2CDE7C8C00906477 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		FBA1BCBF2CDE7C9900906477 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FBE22F3F2CE50FC200C75C8E /* DNDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DNDService.swift; path = Proyecto_Final_191168/Controladores_de_pantallas/Core/DNDService.swift; sourceTree = SOURCE_ROOT; };
+		FBE22F412CE50FD200C75C8E /* DNDRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDRequest.swift; sourceTree = "<group>"; };
+		FBE22F432CE510D200C75C8E /* DNDEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDEndpoint.swift; sourceTree = "<group>"; };
+		FBE22F452CE519CF00C75C8E /* DNDArchetype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDArchetype.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		FB6F810B2CDBD2100065FAA5 /* Proyecto_Final_191168 */ = {
 			isa = PBXGroup;
 			children = (
+				FBE22F3E2CE50F8B00C75C8E /* APIClient */,
 				FBA1BCAB2CDE711100906477 /* Controladores_de_pantallas */,
 				FBA1BCAA2CDE710200906477 /* Proveedor */,
 				FBA1BCA92CDE70DD00906477 /* Modelos */,
@@ -89,9 +98,10 @@
 		FBA1BCA92CDE70DD00906477 /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
-				FBA1BCAE2CDE72AF00906477 /* Classes.swift */,
-				FBA1BCB02CDE72C800906477 /* Monsters.swift */,
-				FBA1BCB72CDE773B00906477 /* Races.swift */,
+				FBA1BCAE2CDE72AF00906477 /* DNDClasses.swift */,
+				FBA1BCB02CDE72C800906477 /* DNDMonsters.swift */,
+				FBA1BCB72CDE773B00906477 /* DNDRaces.swift */,
+				FBE22F452CE519CF00C75C8E /* DNDArchetype.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -121,6 +131,16 @@
 				FBA1BCBF2CDE7C9900906477 /* SettingsViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		FBE22F3E2CE50F8B00C75C8E /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				FBE22F3F2CE50FC200C75C8E /* DNDService.swift */,
+				FBE22F412CE50FD200C75C8E /* DNDRequest.swift */,
+				FBE22F432CE510D200C75C8E /* DNDEndpoint.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,14 +215,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB6F81112CDBD2100065FAA5 /* ViewController.swift in Sources */,
+				FBE22F462CE519CF00C75C8E /* DNDArchetype.swift in Sources */,
+				FBE22F402CE50FC200C75C8E /* DNDService.swift in Sources */,
 				FBA1BCBA2CDE7C4000906477 /* ClassViewController.swift in Sources */,
 				FBA1BCC02CDE7C9900906477 /* SettingsViewController.swift in Sources */,
 				FB6F810D2CDBD2100065FAA5 /* AppDelegate.swift in Sources */,
-				FBA1BCB12CDE72C800906477 /* Monsters.swift in Sources */,
+				FBA1BCB12CDE72C800906477 /* DNDMonsters.swift in Sources */,
 				FBA1BCBC2CDE7C7400906477 /* MonsterViewController.swift in Sources */,
+				FBE22F442CE510D200C75C8E /* DNDEndpoint.swift in Sources */,
 				FB6F810F2CDBD2100065FAA5 /* SceneDelegate.swift in Sources */,
-				FBA1BCB82CDE773B00906477 /* Races.swift in Sources */,
-				FBA1BCAF2CDE72AF00906477 /* Classes.swift in Sources */,
+				FBA1BCB82CDE773B00906477 /* DNDRaces.swift in Sources */,
+				FBA1BCAF2CDE72AF00906477 /* DNDClasses.swift in Sources */,
+				FBE22F422CE50FD200C75C8E /* DNDRequest.swift in Sources */,
 				FBA1BCB32CDE735D00906477 /* TabViewController.swift in Sources */,
 				FBA1BCBE2CDE7C8C00906477 /* RaceViewController.swift in Sources */,
 			);
