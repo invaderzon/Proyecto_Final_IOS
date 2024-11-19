@@ -16,6 +16,25 @@ final class ClassViewController: UIViewController {
         view.backgroundColor = .systemBackground
         title = "Clases"
         
+        let request = DNDRequest(
+            endpoint: .v1,
+            pathComponents: ["classes"],
+            queryParameters: [
+                URLQueryItem(name: "search", value: "Bard")
+            
+            ]
+        )
+        print (request.url)
+        
+        DNDService.shared.execute(request, expecting: DNDClasses.self){ result in 
+            switch result {
+            case .success:
+                break
+            case .failure(let error):
+                print(String(describing: error))
+            }
+        
+        }
     }
     
 

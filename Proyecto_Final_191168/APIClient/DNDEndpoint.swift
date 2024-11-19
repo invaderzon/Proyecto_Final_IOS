@@ -10,7 +10,7 @@ import Foundation
 /// servicio de API primario para obtener los datos de DND
 @frozen enum DNDEndpoint: String {
     /// Punto final para obtener info de la clase
-    case clase // "clase"
+    case v1 // "clase"
     /// Punto final para obtener info del monstruo
     case monster
     /// Punto final para obtener info de la raza
