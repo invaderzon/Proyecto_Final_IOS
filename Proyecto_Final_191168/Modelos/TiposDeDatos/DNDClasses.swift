@@ -8,7 +8,7 @@
 import Foundation
 
 struct DNDClasses: Codable {
-    let id: Int
+    //let id: Int
     let name: String
     let desc: String
     let hit_dice: String
@@ -16,8 +16,8 @@ struct DNDClasses: Codable {
     let hp_at_higher_levels: String
     let prof_armor: String
     let prof_weapons: String
-    let image: String
-    let archetypes: DNDArchetype
+    //let image: String
+    let archetypes: String
 }
 
 

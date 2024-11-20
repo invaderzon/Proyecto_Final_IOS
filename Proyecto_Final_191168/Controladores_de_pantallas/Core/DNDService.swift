@@ -44,8 +44,8 @@ final class DNDService {
             
             //Decodifica la respuesta
             do {
-                let json = try JSONSerialization.jsonObject(with: data)
-                print(String(describing: json))
+                let results = try JSONDecoder().decode(type.self, from: data)
+                completion(.success(results))
                 //
             }
             catch {

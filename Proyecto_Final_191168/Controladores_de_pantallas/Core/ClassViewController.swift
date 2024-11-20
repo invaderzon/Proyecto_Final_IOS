@@ -16,7 +16,16 @@ final class ClassViewController: UIViewController {
         view.backgroundColor = .systemBackground
         title = "Clases"
         
-        let request = DNDRequest(
+        DNDService.shared.execute(.listaSolicitudesClases,
+                                  expecting: DNDObtenerTodasRespuestasClases.self) { result in
+            switch result {
+            case .success(let model):
+                print(String(describing:model))
+            case .failure(let error):
+                print(String(describing: error))
+            }}
+        
+        /*let request = DNDRequest( //Prueba para comprobar el funcionamiento de una solicitud
             endpoint: .v1,
             pathComponents: ["classes"],
             queryParameters: [
@@ -32,20 +41,9 @@ final class ClassViewController: UIViewController {
                 break
             case .failure(let error):
                 print(String(describing: error))
-            }
+            
         
-        }
+        }}*/
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
