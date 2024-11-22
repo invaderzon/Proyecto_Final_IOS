@@ -11,8 +11,7 @@ import Foundation
 final class DNDRequest {
     /// Constantes de API
     private struct Constantes {
-        static let baseUrl = "https://api.open5e.com/v1"
-        static let baseUrlv2 = "https://api.open5e.com/v2"
+        static let baseUrl = "https://www.dnd5eapi.co/api"
     }
     
     // Endpoint deseado

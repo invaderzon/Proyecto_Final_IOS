@@ -8,17 +8,54 @@
 import Foundation
 
 struct DNDClasses: Codable {
-    //let id: Int
+    /*struct Proficiencies: Codable {
+        let index: String
+        let name: String
+        let url: String
+    }*/
+    let index: String
     let name: String
-    let desc: String
-    let hit_dice: String
-    let hp_at_1st_level: String
-    let hp_at_higher_levels: String
-    let prof_armor: String
-    let prof_weapons: String
-    //let image: String
-    let archetypes: String
+    let hit_die: Int?
+    //let proficiencies: Proficiencies?
+    let class_levels: String?
+    let spells: String?
+
+
 }
 
 
 
+/*"index": "bard",
+"name": "Bard",
+"hit_die": 8,
+"proficiencies": []
+"saving_throws": [
+    {
+        "index": "dex",
+        "name": "DEX",
+        "url": "/api/ability-scores/dex"
+    },
+    {
+        "index": "cha",
+        "name": "CHA",
+        "url": "/api/ability-scores/cha"
+    }
+],
+"starting_equipment": [
+    {
+        "equipment": {
+            "index": "leather-armor",
+            "name": "Leather Armor",
+            "url": "/api/equipment/leather-armor"
+        },
+        "quantity": 1
+    },
+    {
+        "equipment": {
+            "index": "dagger",
+            "name": "Dagger",
+            "url": "/api/equipment/dagger"
+        },
+        "quantity": 1
+    }
+],*/

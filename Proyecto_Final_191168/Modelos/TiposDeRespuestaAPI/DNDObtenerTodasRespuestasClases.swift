@@ -8,8 +8,10 @@
 import Foundation
 
 struct DNDObtenerTodasRespuestasClases: Codable {
+    
     let count: Int
-    let next: String? //Puede que sea null
-    let previous: String? //Puede que sea null
+    //let next: String?
+    //let previous: String?
     let results: [DNDClasses]
+    let url: String?
 }

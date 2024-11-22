@@ -13,6 +13,9 @@
 		FB6F81142CDBD2100065FAA5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FB6F81132CDBD2100065FAA5 /* Base */; };
 		FB6F81162CDBD2110065FAA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6F81152CDBD2110065FAA5 /* Assets.xcassets */; };
 		FB6F81192CDBD2110065FAA5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FB6F81182CDBD2110065FAA5 /* Base */; };
+		FB90CD152CEFF17C001AEA34 /* ClassesListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB90CD142CEFF17C001AEA34 /* ClassesListViewViewModel.swift */; };
+		FB90CD182CEFF2AC001AEA34 /* ClassesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB90CD172CEFF2AC001AEA34 /* ClassesListView.swift */; };
+		FB90CD1B2CF002F0001AEA34 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB90CD1A2CF002F0001AEA34 /* Extensions.swift */; };
 		FBA1BCAF2CDE72AF00906477 /* DNDClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCAE2CDE72AF00906477 /* DNDClasses.swift */; };
 		FBA1BCB12CDE72C800906477 /* DNDMonsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCB02CDE72C800906477 /* DNDMonsters.swift */; };
 		FBA1BCB32CDE735D00906477 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1BCB22CDE735D00906477 /* TabViewController.swift */; };
@@ -37,6 +40,9 @@
 		FB6F81152CDBD2110065FAA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB6F81182CDBD2110065FAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB6F811A2CDBD2110065FAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB90CD142CEFF17C001AEA34 /* ClassesListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesListViewViewModel.swift; sourceTree = "<group>"; };
+		FB90CD172CEFF2AC001AEA34 /* ClassesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesListView.swift; sourceTree = "<group>"; };
+		FB90CD1A2CF002F0001AEA34 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FBA1BCAE2CDE72AF00906477 /* DNDClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDClasses.swift; sourceTree = "<group>"; };
 		FBA1BCB02CDE72C800906477 /* DNDMonsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDMonsters.swift; sourceTree = "<group>"; };
 		FBA1BCB22CDE735D00906477 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 		FB6F810B2CDBD2100065FAA5 /* Proyecto_Final_191168 */ = {
 			isa = PBXGroup;
 			children = (
+				FB90CD192CF002B5001AEA34 /* Resources */,
+				FB90CD162CEFF28B001AEA34 /* Views */,
+				FB90CD132CEFF112001AEA34 /* ViewModels */,
 				FBE22F3E2CE50F8B00C75C8E /* APIClient */,
 				FBA1BCAB2CDE711100906477 /* Controladores_de_pantallas */,
 				FBA1BCAA2CDE710200906477 /* Proveedor */,
@@ -95,6 +104,30 @@
 				FB6F811A2CDBD2110065FAA5 /* Info.plist */,
 			);
 			path = Proyecto_Final_191168;
+			sourceTree = "<group>";
+		};
+		FB90CD132CEFF112001AEA34 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CD142CEFF17C001AEA34 /* ClassesListViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FB90CD162CEFF28B001AEA34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CD172CEFF2AC001AEA34 /* ClassesListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB90CD192CF002B5001AEA34 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CD1A2CF002F0001AEA34 /* Extensions.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FBA1BCA92CDE70DD00906477 /* Modelos */ = {
@@ -235,16 +268,19 @@
 			files = (
 				FB6F81112CDBD2100065FAA5 /* ViewController.swift in Sources */,
 				FBE22F462CE519CF00C75C8E /* DNDArchetype.swift in Sources */,
+				FB90CD152CEFF17C001AEA34 /* ClassesListViewViewModel.swift in Sources */,
 				FBE22F402CE50FC200C75C8E /* DNDService.swift in Sources */,
 				FBA1BCBA2CDE7C4000906477 /* ClassViewController.swift in Sources */,
 				FBA1BCC02CDE7C9900906477 /* SettingsViewController.swift in Sources */,
 				FB6F810D2CDBD2100065FAA5 /* AppDelegate.swift in Sources */,
+				FB90CD1B2CF002F0001AEA34 /* Extensions.swift in Sources */,
 				FBA1BCB12CDE72C800906477 /* DNDMonsters.swift in Sources */,
 				FBA1BCBC2CDE7C7400906477 /* MonsterViewController.swift in Sources */,
 				FBE22F442CE510D200C75C8E /* DNDEndpoint.swift in Sources */,
 				FBF3D5E12CEE509A00C58A0B /* DNDObtenerTodasRespuestasClases.swift in Sources */,
 				FB6F810F2CDBD2100065FAA5 /* SceneDelegate.swift in Sources */,
 				FBA1BCB82CDE773B00906477 /* DNDRaces.swift in Sources */,
+				FB90CD182CEFF2AC001AEA34 /* ClassesListView.swift in Sources */,
 				FBA1BCAF2CDE72AF00906477 /* DNDClasses.swift in Sources */,
 				FBE22F422CE50FD200C75C8E /* DNDRequest.swift in Sources */,
 				FBA1BCB32CDE735D00906477 /* TabViewController.swift in Sources */,
