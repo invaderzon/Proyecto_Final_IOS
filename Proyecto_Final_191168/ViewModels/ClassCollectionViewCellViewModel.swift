@@ -2,14 +2,17 @@ import Foundation
 
 struct ClassCollectionViewCellViewModel {
   public let nombreClase: String
+public let textoClase: String
   private let imagenUrlclase: URL?
 
 
   init(
     nombreClase: String,
+    textoClase:String,
     imagenUrlclase: URL?
   ){
     self.nombreClase = nombreClase
+      self.textoClase = textoClase
     self.imagenUrlclase = imagenUrlclase
   }
 

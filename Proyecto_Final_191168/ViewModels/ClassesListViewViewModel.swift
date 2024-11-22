@@ -8,7 +8,7 @@
 import UIKit
 
 
-final class ClassListViewViewModel: NSObject {
+final class ClassesListViewViewModel: NSObject {
 
     private var classes: [DNDClasses] = []
 
@@ -17,8 +17,8 @@ final class ClassListViewViewModel: NSObject {
             for clase in classes {
                 let viewModel = ClassCollectionViewCellViewModel(
                                                                  nombreClase: clase.name, 
-                    imagenUrlclase: URL(string: clase.image)
-                    cellViewModels.append(viewModel)
+                    imagenUrlclase: URL(string: clase.image),
+                    cellViewModels.append(viewModel))
             }
         }
     }
@@ -38,7 +38,7 @@ final class ClassListViewViewModel: NSObject {
     }
 }
 
-extension ClassListViewViewModel: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension ClassesListViewViewModel: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellViewModels.count
     }

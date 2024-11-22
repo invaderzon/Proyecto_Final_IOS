@@ -7,18 +7,16 @@
 
 import Foundation
 
-struct DNDClasses: Codable {
-    /*struct Proficiencies: Codable {
-        let index: String
-        let name: String
-        let url: String
-    }*/
-    let index: String
+struct Personaje: Codable {
+    let id: Int
     let name: String
-    let hit_die: Int?
-    //let proficiencies: Proficiencies?
-    let class_levels: String?
-    let spells: String?
+    let description: String
+    let status: PersonajeStatus
+    let species: String
+    let gender: PersonajeGenero
+    let origen: Origen
+    let actors: [String]
+    let image: String
 
 
 }
