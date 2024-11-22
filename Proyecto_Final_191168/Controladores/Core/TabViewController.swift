@@ -16,17 +16,17 @@ final class TabBarController: UITabBarController {
     private func setUpTabs() {
         let personajeVC = PersonajeViewController()
         let locacionVC = LocacionViewController()
-        let especiesVC = EspeciesViewController()
+        let especiesVC = EspecieViewController()
         let settingsVC = SettingsViewController()
         
-        charactersVC.navigationItem.largeTitleDisplayMode = .automatic
-        locationsVC.navigationItem.largeTitleDisplayMode = .automatic
-        episodesVC.navigationItem.largeTitleDisplayMode = .automatic
+        personajeVC.navigationItem.largeTitleDisplayMode = .automatic
+        locacionVC.navigationItem.largeTitleDisplayMode = .automatic
+        especiesVC.navigationItem.largeTitleDisplayMode = .automatic
         settingsVC.navigationItem.largeTitleDisplayMode = .automatic
         
-        let nav1 = UINavigationController(rootViewController: charactersVC)
-        let nav2 = UINavigationController(rootViewController: locationsVC)
-        let nav3 = UINavigationController(rootViewController: episodesVC)
+        let nav1 = UINavigationController(rootViewController: personajeVC)
+        let nav2 = UINavigationController(rootViewController: locacionVC)
+        let nav3 = UINavigationController(rootViewController: especiesVC)
         let nav4 = UINavigationController(rootViewController: settingsVC)
         
         nav1.tabBarItem = UITabBarItem(title: "Characters",
@@ -35,8 +35,8 @@ final class TabBarController: UITabBarController {
         nav2.tabBarItem = UITabBarItem(title: "Locations",
                                        image: UIImage(systemName: "globe"),
                                        tag: 2)
-        nav3.tabBarItem = UITabBarItem(title: "Episodes",
-                                       image: UIImage(systemName: "tv"),
+        nav3.tabBarItem = UITabBarItem(title: "Species",
+                                       image: UIImage(systemName: "person.3"),
                                        tag: 3)
         nav4.tabBarItem = UITabBarItem(title: "Settings",
                                        image: UIImage(systemName: "gear"),

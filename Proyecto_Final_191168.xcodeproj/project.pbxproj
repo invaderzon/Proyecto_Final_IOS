@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB16A6CE2CF1004200F4E4BE /* Servicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16A6CD2CF1004200F4E4BE /* Servicio.swift */; };
+		FB16A6D02CF1004D00F4E4BE /* Solicitud.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16A6CF2CF1004D00F4E4BE /* Solicitud.swift */; };
+		FB16A6D22CF1006300F4E4BE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16A6D12CF1006300F4E4BE /* Endpoint.swift */; };
+		FB16A6D52CF1025600F4E4BE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16A6D42CF1025600F4E4BE /* ImageLoader.swift */; };
+		FB16A6D72CF1026E00F4E4BE /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16A6D62CF1026E00F4E4BE /* APICacheManager.swift */; };
+		FB16A6DD2CF10CDA00F4E4BE /* PersonajeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16A6DC2CF10CDA00F4E4BE /* PersonajeListView.swift */; };
+		FB16A6DF2CF10E2400F4E4BE /* PersonajeListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16A6DE2CF10E2400F4E4BE /* PersonajeListViewViewModel.swift */; };
+		FB16A6E12CF10F4B00F4E4BE /* PersonajeCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16A6E02CF10F4B00F4E4BE /* PersonajeCollectionViewCellViewModel.swift */; };
 		FB6F810D2CDBD2100065FAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6F810C2CDBD2100065FAA5 /* AppDelegate.swift */; };
 		FB6F810F2CDBD2100065FAA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6F810E2CDBD2100065FAA5 /* SceneDelegate.swift */; };
 		FB6F81112CDBD2100065FAA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6F81102CDBD2100065FAA5 /* ViewController.swift */; };
@@ -30,6 +38,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB16A6CD2CF1004200F4E4BE /* Servicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servicio.swift; sourceTree = "<group>"; };
+		FB16A6CF2CF1004D00F4E4BE /* Solicitud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solicitud.swift; sourceTree = "<group>"; };
+		FB16A6D12CF1006300F4E4BE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FB16A6D42CF1025600F4E4BE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		FB16A6D62CF1026E00F4E4BE /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
+		FB16A6DC2CF10CDA00F4E4BE /* PersonajeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajeListView.swift; sourceTree = "<group>"; };
+		FB16A6DE2CF10E2400F4E4BE /* PersonajeListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajeListViewViewModel.swift; sourceTree = "<group>"; };
+		FB16A6E02CF10F4B00F4E4BE /* PersonajeCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajeCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		FB6F81092CDBD2100065FAA5 /* Proyecto_Final_191168.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proyecto_Final_191168.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6F810C2CDBD2100065FAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB6F810E2CDBD2100065FAA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +81,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB16A6CC2CF1001A00F4E4BE /* ClienteAPI */ = {
+			isa = PBXGroup;
+			children = (
+				FB16A6CD2CF1004200F4E4BE /* Servicio.swift */,
+				FB16A6CF2CF1004D00F4E4BE /* Solicitud.swift */,
+				FB16A6D12CF1006300F4E4BE /* Endpoint.swift */,
+			);
+			path = ClienteAPI;
+			sourceTree = "<group>";
+		};
+		FB16A6D32CF1023F00F4E4BE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FB16A6D42CF1025600F4E4BE /* ImageLoader.swift */,
+				FB16A6D62CF1026E00F4E4BE /* APICacheManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FB16A6D82CF10BBF00F4E4BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB16A6DB2CF10CB600F4E4BE /* Personaje */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB16A6DA2CF10C4700F4E4BE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB16A6DE2CF10E2400F4E4BE /* PersonajeListViewViewModel.swift */,
+				FB16A6E02CF10F4B00F4E4BE /* PersonajeCollectionViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FB16A6DB2CF10CB600F4E4BE /* Personaje */ = {
+			isa = PBXGroup;
+			children = (
+				FB16A6DC2CF10CDA00F4E4BE /* PersonajeListView.swift */,
+			);
+			path = Personaje;
+			sourceTree = "<group>";
+		};
 		FB6F81002CDBD2100065FAA5 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +144,10 @@
 		FB6F810B2CDBD2100065FAA5 /* Proyecto_Final_191168 */ = {
 			isa = PBXGroup;
 			children = (
+				FB16A6D32CF1023F00F4E4BE /* Managers */,
+				FB16A6CC2CF1001A00F4E4BE /* ClienteAPI */,
+				FB16A6DA2CF10C4700F4E4BE /* ViewModels */,
+				FB16A6D82CF10BBF00F4E4BE /* Views */,
 				FBFA0EA32CF0FA410069935D /* Controladores */,
 				FBFA0E922CF0F30F0069935D /* Recursos */,
 				FBA1BCA92CDE70DD00906477 /* Modelos */,
@@ -246,11 +310,19 @@
 				FBFA0E9A2CF0F6020069935D /* Origen.swift in Sources */,
 				FBFA0E942CF0F3260069935D /* Extensiones.swift in Sources */,
 				FBFA0EA22CF0F9280069935D /* ObtenerTodasLasRespuestasPersonajes.swift in Sources */,
+				FB16A6DF2CF10E2400F4E4BE /* PersonajeListViewViewModel.swift in Sources */,
+				FB16A6E12CF10F4B00F4E4BE /* PersonajeCollectionViewCellViewModel.swift in Sources */,
 				FB6F810F2CDBD2100065FAA5 /* SceneDelegate.swift in Sources */,
 				FBFA0EA92CF0FAA20069935D /* PersonajeViewController.swift in Sources */,
+				FB16A6D02CF1004D00F4E4BE /* Solicitud.swift in Sources */,
+				FB16A6D72CF1026E00F4E4BE /* APICacheManager.swift in Sources */,
 				FBFA0EAF2CF0FAE10069935D /* SettingsViewController.swift in Sources */,
+				FB16A6D52CF1025600F4E4BE /* ImageLoader.swift in Sources */,
+				FB16A6D22CF1006300F4E4BE /* Endpoint.swift in Sources */,
+				FB16A6DD2CF10CDA00F4E4BE /* PersonajeListView.swift in Sources */,
 				FBFA0EAB2CF0FAB50069935D /* LocacionViewController.swift in Sources */,
 				FBFA0E962CF0F5030069935D /* PersonajeStatus.swift in Sources */,
+				FB16A6CE2CF1004200F4E4BE /* Servicio.swift in Sources */,
 				FBA1BCAF2CDE72AF00906477 /* Personaje.swift in Sources */,
 				FBFA0E9E2CF0F7D10069935D /* Locaciones.swift in Sources */,
 			);
