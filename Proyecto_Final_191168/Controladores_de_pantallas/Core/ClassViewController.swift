@@ -18,6 +18,7 @@ final class ClassViewController: UIViewController {
         title = "Clases"
         
         setUpView()
+        //addSearchButton()
 
         
         

@@ -28,8 +28,8 @@ final class ClassesListView: UIView {
         collectionView.isHidden = true
         collectionView.alpha = 0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(UICollectionViewCell.self, 
-                                forCellWithReuseIdentifier: "cell")
+        collectionView.register(ClassCollectionViewCellViewModel.self, 
+                                forCellWithReuseIdentifier: ClassCollectionViewCellViewModel.cellIdentifier)
         
         return collectionView
     }()
@@ -43,6 +43,7 @@ final class ClassesListView: UIView {
         addConstraints()
         
         spinner.startAnimating()
+        
         viewModel.fetchClasses()
         
         setUpCollectionView()
