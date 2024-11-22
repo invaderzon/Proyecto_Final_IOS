@@ -14,9 +14,9 @@ final class TabBarController: UITabBarController {
     }
     
     private func setUpTabs() {
-        let charactersVC = PersonajeViewController()
-        let locationsVC = LocacionViewController()
-        let episodesVC = EspeciesViewController()
+        let personajeVC = PersonajeViewController()
+        let locacionVC = LocacionViewController()
+        let especiesVC = EspeciesViewController()
         let settingsVC = SettingsViewController()
         
         charactersVC.navigationItem.largeTitleDisplayMode = .automatic
