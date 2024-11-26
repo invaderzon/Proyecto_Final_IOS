@@ -1,22 +1,16 @@
-//
-//  PersonajeCollectionViewCellViewModel.swift
-//  Proyecto_Final_191168
-//
-//  Created by alumno on 11/22/24.
-//
+import Foundation
 
-import UIKit
 
-protocol EpisodioDetallesViewViewModelDelegate: AnyObject {
-    func didFetchEpisodeDetails()
+protocol LocacionDetallesViewViewModelDelegate: AnyObject {
+    func didFetchLocationDetails()
 }
 
-final class EpisodioDetallesViewViewModel {
+final class LocacionDetallesViewViewModel {
     private let endpointUrl: URL?
-    private var dataTuple: (episode: Episodio, characters: [Personaje])? {
+    private var dataTuple: (location: Locacion, characters: [Personaje])? {
         didSet {
             createCellViewModels()
-            delegate?.didFetchEpisodeDetails()
+            delegate?.didFetchLocationDetails()
         }
     }
 
@@ -25,7 +19,7 @@ final class EpisodioDetallesViewViewModel {
         case characters(viewModel: [PersonajeCollectionViewCellViewModel])
     }
 
-    public weak var delegate: EpisodioDetallesViewViewModelDelegate?
+    public weak var delegate: LocacionDetailViewViewModelDelegate?
 
     public private(set) var cellViewModels: [SectionType] = []
 
@@ -40,24 +34,25 @@ final class EpisodioDetallesViewViewModel {
         return dataTuple.characters[index]
     }
 
+
     private func createCellViewModels() {
         guard let dataTuple = dataTuple else {
             return
         }
 
-        let episode = dataTuple.episode
+        let location = dataTuple.location
         let characters = dataTuple.characters
 
-        var createdString = episode.created
-        if let date = PersonajeInfoCollectionViewCellViewModel.dateFormatter.date(from: episode.created) {
+        var createdString = location.created
+        if let date = PersonajeInfoCollectionViewCellViewModel.dateFormatter.date(from: location.created) {
             createdString = PersonajeInfoCollectionViewCellViewModel.shortDateFormatter.string(from: date)
         }
 
         cellViewModels = [
             .information(viewModels: [
-                .init(title: "Episode Name", value: episode.name),
-                .init(title: "Air Date", value: episode.air_date),
-                .init(title: "Episode", value: episode.episode),
+                .init(title: "Location Name", value: location.name),
+                .init(title: "Type", value: location.type),
+                .init(title: "Dimension", value: location.dimension),
                 .init(title: "Created", value: createdString),
             ]),
             .characters(viewModel: characters.compactMap({ character in
@@ -70,33 +65,30 @@ final class EpisodioDetallesViewViewModel {
         ]
     }
 
-    /// Captura modelo de episodio
-    public func fetchEpisodeData() {
+    /// Obtener respaldo del modelo de locación
+    public func fetchLocationData() {
         guard let url = endpointUrl,
               let request = Solicitud(url: url) else {
             return
         }
 
         Servicio.shared.execute(request,
-                                 expecting: Episodio.self) { [weak self] result in
+                                 expecting: Locacion.self) { [weak self] result in
             switch result {
             case .success(let model):
-                self?.fetchRelatedCharacters(episode: model)
+                self?.fetchRelatedCharacters(location: model)
             case .failure:
                 break
             }
         }
     }
 
-    private func fetchRelatedCharacters(episode: Episodio) {
-        let requests: [Solicitud] = episode.characters.compactMap({
+    private func fetchRelatedCharacters(location: Locacion) {
+        let requests: [Solicitud] = location.residents.compactMap({
             return URL(string: $0)
         }).compactMap({
             return Solicitud(url: $0)
         })
-
-        // 10 solicitudes paralelas
-        // Notificar cuando se completen
 
         let group = DispatchGroup()
         var characters: [Personaje] = []
@@ -118,7 +110,7 @@ final class EpisodioDetallesViewViewModel {
 
         group.notify(queue: .main) {
             self.dataTuple = (
-                episode: episode,
+                location: location,
                 characters: characters
             )
         }

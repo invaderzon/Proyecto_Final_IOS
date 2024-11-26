@@ -1,33 +1,26 @@
-//
-//  PersonajeListView.swift
-//  Proyecto_Final_191168
-//
-//  Created by alumno on 11/22/24.
-//
-
 import UIKit
 
-protocol PersonajeListViewDelegate: AnyObject {
-    func dwPersonajeListView(
-        _ characterListView: PersonajeListView,
-        didSelectCharacter character: Personaje
+protocol EpisodioListViewDelegate: AnyObject {
+    func rmEpisodioListView(
+        _ characterListView: EpisodioListView,
+        didSelectEpisode episode: Episodio
     )
 }
 
-/// Vista que maneja mostrar la lista de personajes, loader, etc.
-final class PersonajeListView: UIView {
-    
-    public weak var delegate: PersonajeListViewDelegate?
-    
-    private let viewModel = PersonajeListViewViewModel()
-    
+/// View that handles showing list of episodes, loader, etc.
+final class EpisodioListView: UIView {
+
+    public weak var delegate: EpisodioListViewDelegate?
+
+    private let viewModel = EpisodioListViewViewModel()
+
     private let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
         spinner.translatesAutoresizingMaskIntoConstraints = false
         return spinner
     }()
-    
+
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -36,15 +29,16 @@ final class PersonajeListView: UIView {
         collectionView.isHidden = true
         collectionView.alpha = 0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(PersonajeCollectionViewCell.self,
-                                forCellWithReuseIdentifier: PersonajeCollectionViewCell.cellIdentifier)
-        collectionView.register(RMFooterLoadingCollectionReusableView.self,
+        collectionView.register(PersonajeEpisodioCollectionViewCell.self,
+                                forCellWithReuseIdentifier: PersonajeEpisodioCollectionViewCell.cellIdentifer)
+        collectionView.register(FooterLoadingCollectionReusableView.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-                                withReuseIdentifier: RMFooterLoadingCollectionReusableView.identifier)
+                                withReuseIdentifier: FooterLoadingCollectionReusableView.identifier)
         return collectionView
     }()
 
-    
+    // MARK: - Init
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
@@ -52,52 +46,51 @@ final class PersonajeListView: UIView {
         addConstraints()
         spinner.startAnimating()
         viewModel.delegate = self
-        viewModel.fetchCharacters()
+        viewModel.fetchEpisodes()
         setUpCollectionView()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("Unsupported")
     }
-    
+
     private func addConstraints() {
         NSLayoutConstraint.activate([
             spinner.widthAnchor.constraint(equalToConstant: 100),
             spinner.heightAnchor.constraint(equalToConstant: 100),
             spinner.centerXAnchor.constraint(equalTo: centerXAnchor),
             spinner.centerYAnchor.constraint(equalTo: centerYAnchor),
-            
+
             collectionView.topAnchor.constraint(equalTo: topAnchor),
             collectionView.leftAnchor.constraint(equalTo: leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
-    
+
     private func setUpCollectionView() {
         collectionView.dataSource = viewModel
         collectionView.delegate = viewModel
     }
 }
 
-extension RMCharacterListView: RMCharacterListViewViewModelDelegate {
-    func didSelectCharacter(_ character: RMCharacter) {
-        delegate?.rmCharacterListView(self, didSelectCharacter: character)
-    }
-    
-    func didLoadInitialCharacters() {
+extension EpisodioListView: EpisodioListViewViewModelDelegate {
+    func didLoadInitialEpisodes() {
         spinner.stopAnimating()
         collectionView.isHidden = false
-        collectionView.reloadData() // Captura inicial
+        collectionView.reloadData() // Initial fetch
         UIView.animate(withDuration: 0.4) {
             self.collectionView.alpha = 1
         }
     }
-    
-    func didLoadMoreCharacters(with newIndexPaths: [IndexPath]) {
-        
+
+    func didLoadMoreEpisodes(with newIndexPaths: [IndexPath]) {
         collectionView.performBatchUpdates {
             self.collectionView.insertItems(at: newIndexPaths)
         }
+    }
+
+    func didSelectEpisode(_ episode: Episodio) {
+        delegate?.rmEpisodioListView(self, didSelectEpisode: episode)
     }
 }
