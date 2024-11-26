@@ -8,13 +8,13 @@
 import Foundation
 
 struct ObtenerTodasLasRespuestasPersonajes: Codable {
-    let id: Int
-    let name: String
-    let description: String
-    let status: PersonajeStatus
-    let species: String
-    let gender: PersonajeGenero
-    let origen: Origen
-    let actors: [String]
-    let image: String
+    struct Info: Codable {
+        let count: Int
+        let pages: Int
+        let next: String?
+        let prev: String?
+    }
+
+    let info: Info
+    let results: [Personaje]
 }

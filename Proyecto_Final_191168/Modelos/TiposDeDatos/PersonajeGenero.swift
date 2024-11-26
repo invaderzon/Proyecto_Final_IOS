@@ -10,5 +10,6 @@ import Foundation
 enum PersonajeGenero: String, Codable {
     case male = "Male"
     case female = "Female"
+    case genderless = "Genderless"
     case unknown = "Unknown"
 }

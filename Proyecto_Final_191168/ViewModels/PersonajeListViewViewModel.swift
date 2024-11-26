@@ -15,7 +15,7 @@ protocol PersonajeListViewViewModelDelegate: AnyObject {
 }
 
 /// View Model para manejar la logica de la logica de list view
-final class RMCharacterListViewViewModel: NSObject {
+final class PersonajeListViewViewModel: NSObject {
     public weak var delegate: PersonajeListViewViewModelDelegate?
     
     private var isLoadingMoreCharacters = false

@@ -14,7 +14,7 @@ enum PersonajeStatus: String, Codable {
     
     var text: String {
         switch self {
-        case .vivo, .muerto:
+        case .alive, .dead:
             return rawValue
         case .unknown:
             return "Unknown"

@@ -16,17 +16,17 @@ final class TabBarController: UITabBarController {
     private func setUpTabs() {
         let personajeVC = PersonajeViewController()
         let locacionVC = LocacionViewController()
-        let especiesVC = EspecieViewController()
+        let episodiosVC = EpisodioViewController()
         let settingsVC = SettingsViewController()
         
         personajeVC.navigationItem.largeTitleDisplayMode = .automatic
         locacionVC.navigationItem.largeTitleDisplayMode = .automatic
-        especiesVC.navigationItem.largeTitleDisplayMode = .automatic
+        episodiosVC.navigationItem.largeTitleDisplayMode = .automatic
         settingsVC.navigationItem.largeTitleDisplayMode = .automatic
         
         let nav1 = UINavigationController(rootViewController: personajeVC)
         let nav2 = UINavigationController(rootViewController: locacionVC)
-        let nav3 = UINavigationController(rootViewController: especiesVC)
+        let nav3 = UINavigationController(rootViewController: episodiosVC)
         let nav4 = UINavigationController(rootViewController: settingsVC)
         
         nav1.tabBarItem = UITabBarItem(title: "Characters",
@@ -35,8 +35,8 @@ final class TabBarController: UITabBarController {
         nav2.tabBarItem = UITabBarItem(title: "Locations",
                                        image: UIImage(systemName: "globe"),
                                        tag: 2)
-        nav3.tabBarItem = UITabBarItem(title: "Species",
-                                       image: UIImage(systemName: "person.3"),
+        nav3.tabBarItem = UITabBarItem(title: "Episodes",
+                                       image: UIImage(systemName: "tv"),
                                        tag: 3)
         nav4.tabBarItem = UITabBarItem(title: "Settings",
                                        image: UIImage(systemName: "gear"),

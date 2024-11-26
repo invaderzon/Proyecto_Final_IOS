@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    /// Add multiple subviews
+    /// Agrega multiples subvistas
     /// - Parameter views: Variadic views
     func addSubviews(_ views: UIView...) {
         views.forEach({
@@ -18,6 +18,6 @@ extension UIView {
 }
 
 extension UIDevice {
-    /// Check if current device is phone idiom
+    /// Revisa si el aparato actual es en idioma de celular
     static let isiPhone = UIDevice.current.userInterfaceIdiom == .phone
 }

@@ -10,7 +10,7 @@ import Foundation
 final class Solicitud {
     // Constantes de la API
     private struct Constants {
-        static let baseUrl = "https://doctor-who-api.onrender.com/api"
+        static let baseUrl = "https://rickandmortyapi.com/api"
     }
     
     // endpoint deseado
@@ -87,10 +87,10 @@ final class Solicitud {
                     pathComponents = components
                     pathComponents.removeFirst()
                 }
-                if let dwEndpoint = Endpoint(
+                if let rmEndpoint = Endpoint(
                     rawValue: endpointString
                 ) {
-                    self.init(endpoint: dwEndpoint, pathComponents: pathComponents)
+                    self.init(endpoint: rmEndpoint, pathComponents: pathComponents)
                     return
                 }
             }
@@ -112,8 +112,8 @@ final class Solicitud {
                     )
                 })
                 
-                if let dwEndpoint = Endpoint(rawValue: endpointString) {
-                    self.init(endpoint: dwEndpoint, queryParameters: queryItems)
+                if let rmEndpoint = Endpoint(rawValue: endpointString) {
+                    self.init(endpoint: rmEndpoint, queryParameters: queryItems)
                     return
                 }
             }
@@ -125,6 +125,6 @@ final class Solicitud {
 
 extension Solicitud {
     static let listaSolicitudesPersonaje = Solicitud(endpoint: .character)
-    static let listaSolicitudesEspecies = Solicitud(endpoint: .species)
+    static let listaSolicitudesEpisodios = Solicitud(endpoint: .episode)
     static let listaSolicitudesLocaciones = Solicitud(endpoint: .location)
 }

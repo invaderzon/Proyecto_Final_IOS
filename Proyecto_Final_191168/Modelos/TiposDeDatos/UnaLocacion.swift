@@ -8,8 +8,6 @@
 import Foundation
 
 struct UnaLocacion: Codable {
-    let id: Int
     let name: String
-    let type: String
-    let description: String
+    let url: String
 }

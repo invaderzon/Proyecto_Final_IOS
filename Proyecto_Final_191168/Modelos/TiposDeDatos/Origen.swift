@@ -9,5 +9,5 @@ import Foundation
 
 struct Origen: Codable {
     let name: String
-    let endpoint: String
+    let url: String
 }

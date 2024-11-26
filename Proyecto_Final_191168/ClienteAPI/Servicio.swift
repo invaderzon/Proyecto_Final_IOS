@@ -17,7 +17,7 @@ final class Servicio {
     /// Constructor privado
     private init() {}
     
-    // Tipos de errores
+    // Tipos de errores (No se pudo hacer la solicitud o no se pudo obtener los datos)
     enum ServiceError: Error {
         case failedToCreateRequest
         case failedToGetData
@@ -84,6 +84,4 @@ final class Servicio {
         request.httpMethod = dwRequest.httpMethod
         return request
     }
-    
-    
 }
